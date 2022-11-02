@@ -1,0 +1,25 @@
+:root {
+    --stat-width: 0;
+}
+
+html, body {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Hind Madurai', sans-serif;
+    background-image: url("./assets/bacground.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.stats::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: var(--stat-width);
+    height: 100%;
+    background-color: white;
+}
