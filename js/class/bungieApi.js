@@ -17,7 +17,7 @@ export class BungieApi {
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
                     "X-API-Key": this.apiKey,
-                    "Origin": "https://localhost:5500"
+                    "Origin": window.location.origin
                 },
                 mode: "cors",
                 body: `grant_type=authorization_code&code=${localStorage.getItem("auth_code")}&client_id=41807`
@@ -40,7 +40,7 @@ export class BungieApi {
                 method: "GET",
                 headers: {
                     "X-API-Key": this.apiKey,
-                    "Origin": "https://localhost:5500",
+                    "Origin": window.location.origin,
                     "authorization": `Bearer ${localStorage.getItem("access_token")}`
                 },
                 mode: "cors"
@@ -69,7 +69,7 @@ export class BungieApi {
             const options = {
                 method: "GET",
                 headers: {
-                    "Origin": "https://localhost:5500",
+                    "Origin": window.location.origin,
                     "X-API-Key": this.apiKey,
                     "authorization": `Bearer ${localStorage.getItem("access_token")}`
                 }
