@@ -101,7 +101,7 @@ export class BungieApi {
                 method: "GET",
             }
 
-            const url = "https://www.bungie.net/common/destiny2_content/json/fr/DestinyInventoryItemDefinition-c56f2be5-410b-451d-b7d0-11d545b0c376.json" //`https://www.bungie.net/common/destiny2_content/json/fr/DestinyInventoryItemDefinition-1b303207-5a14-4260-afb1-591ae61e113f.json`
+            const url = "/common/destiny2_content/json/fr/DestinyInventoryItemDefinition-db012e16-ceba-494c-bf5f-41c269ef22bd.json" //`https://www.bungie.net/common/destiny2_content/json/fr/DestinyInventoryItemDefinition-1b303207-5a14-4260-afb1-591ae61e113f.json`
             const res = await fetch(url, options)
             const manifest = await res.json()
             return manifest
